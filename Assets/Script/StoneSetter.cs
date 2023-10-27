@@ -9,9 +9,6 @@ public class StoneSetter : MonoBehaviour{
 
     int turn_color = 1;
 
-    int whiteCount = 0;
-    int blackCount = 0;
-
     [SerializeField]
     TextMeshProUGUI turn_title;
 
@@ -94,4 +91,13 @@ public class StoneSetter : MonoBehaviour{
             Player_name();
         }
     }
+}
+
+public static class ScoreResult{
+    public static int[] ResultsInts;
+
+    public static int whiteCount;
+    public static int BlackCount;
+    public static int voidCount;
+
 }
