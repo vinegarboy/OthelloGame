@@ -505,9 +505,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d185e14c11771f641829880de7242fae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  white_stone_text: {fileID: 0}
-  black_stone_text: {fileID: 0}
-  Who_win_text: {fileID: 0}
+  white_stone_text: {fileID: 1542715993}
+  black_stone_text: {fileID: 43034989}
+  Who_win_text: {fileID: 697557587}
 --- !u!1 &697557585
 GameObject:
   m_ObjectHideFlags: 0

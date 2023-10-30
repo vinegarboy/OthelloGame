@@ -89,8 +89,17 @@ public class StoneSetter : MonoBehaviour{
     void color_Change(){
         if(turn_color == 1){
             turn_color = 2;
+            if(bd.can_put_list(turn_color).Count == 0){
+                turn_color = 1;
+            }
         }else{
             turn_color = 1;
+            if(bd.can_put_list(turn_color).Count == 0){
+                turn_color = 2;
+                if(vsAi){
+                    AIClick();
+                }
+            }
         }
     }
 
@@ -101,10 +110,10 @@ public class StoneSetter : MonoBehaviour{
             color_Change();
             ViewCanPut();
             Player_name();
+            CheckResult();
             if(vsAi){
                 AIClick();
             }
-            CheckResult();
         }
     }
 
