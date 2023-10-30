@@ -12,7 +12,7 @@ PlayerSettings:
   targetDevice: 2
   useOnDemandResources: 0
   accelerometerFrequency: 60
-  companyName: DefaultCompany
+  companyName: "\u9162\u98EF\u5DE5\u623F"
   productName: OthelloGame
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
