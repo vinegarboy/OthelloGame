@@ -1,9 +1,8 @@
 using System;
 using System.Collections.Generic;
-using System.IO;
-using System.Linq;
 
-namespace Othello{
+namespace Othello
+{
 
     /// <summary>
     /// 通常の8*8の盤面を利用するオセロのクラス

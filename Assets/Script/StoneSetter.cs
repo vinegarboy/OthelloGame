@@ -1,11 +1,8 @@
-using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 using Othello;
 using TMPro;
 using OthelloAI;
-using UnityEngine.SocialPlatforms.Impl;
 using UnityEngine.SceneManagement;
 
 public class StoneSetter : MonoBehaviour{

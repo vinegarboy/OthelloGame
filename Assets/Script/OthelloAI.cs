@@ -1,12 +1,11 @@
-using System.Security.Cryptography;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using Othello;
-using System.Text;
 
-namespace OthelloAI{
+namespace OthelloAI
+{
 
     /// <summary>
     /// 8*8の盤面データで機能する学習機能付きオセロのCPU
