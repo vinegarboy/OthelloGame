@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,9 +6,9 @@ using UnityEngine.SceneManagement;
 
 public class SceneController : MonoBehaviour{
 
-    public void ChangeSoloPlay(){
+    public void ChangeSoloPlay(String SceneName){
         Debug.Log("ChangeScene");
-        SceneManager.LoadScene("PlayScene");
+        SceneManager.LoadScene(SceneName);
     }
     public void Exit(){
         #if UNITY_EDITOR

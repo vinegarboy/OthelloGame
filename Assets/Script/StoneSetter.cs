@@ -4,10 +4,17 @@ using Unity.VisualScripting;
 using UnityEngine;
 using Othello;
 using TMPro;
+using OthelloAI;
 
 public class StoneSetter : MonoBehaviour{
 
     int turn_color = 1;
+
+    public bool vsAi = false;
+
+    AISystem ai = new AISystem(2);
+    [SerializeField]
+    TextMeshProUGUI AI_data;
 
     [SerializeField]
     TextMeshProUGUI turn_title;
@@ -89,7 +96,20 @@ public class StoneSetter : MonoBehaviour{
             color_Change();
             ViewCanPut();
             Player_name();
+            if(vsAi){
+                AIClick();
+            }
         }
+    }
+
+    public void AIClick(){
+        ai.SetBoard(bd.board);
+        int[] pos = ai.most_flip_put_stone();
+        bd.put_stone(pos[0],pos[1],turn_color);
+        AI_data.text = $"AI Datas\nSetPosition\nx:{pos[0]}\ny:{pos[1]}";
+        color_Change();
+        ViewCanPut();
+        Player_name();
     }
 }
 
