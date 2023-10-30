@@ -5,6 +5,8 @@ using UnityEngine;
 using Othello;
 using TMPro;
 using OthelloAI;
+using UnityEngine.SocialPlatforms.Impl;
+using UnityEngine.SceneManagement;
 
 public class StoneSetter : MonoBehaviour{
 
@@ -50,6 +52,9 @@ public class StoneSetter : MonoBehaviour{
 
     void Show_DebugText(){
         int[] count = bd.Color_Count();
+        ScoreResult.voidCount = count[0];
+        ScoreResult.WhiteCount = count[1];
+        ScoreResult.BlackCount = count[2];
         Debug_Text.text = $"Void:{count[0]}\nWhite:{count[1]}\nBlack:{count[2]}";
     }
 
@@ -99,6 +104,15 @@ public class StoneSetter : MonoBehaviour{
             if(vsAi){
                 AIClick();
             }
+            CheckResult();
+        }
+    }
+
+    public void CheckResult(){
+        int who_win = bd.judge_winner();
+        ScoreResult.winner = who_win;
+        if(who_win != -1){
+            SceneManager.LoadScene("Result");
         }
     }
 
@@ -110,13 +124,15 @@ public class StoneSetter : MonoBehaviour{
         color_Change();
         ViewCanPut();
         Player_name();
+        CheckResult();
     }
 }
 
 public static class ScoreResult{
-    public static int[] ResultsInts;
 
-    public static int whiteCount;
+    public static int winner = -1;
+
+    public static int WhiteCount;
     public static int BlackCount;
     public static int voidCount;
 
