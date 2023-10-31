@@ -125,7 +125,9 @@ public class StoneSetter : MonoBehaviour{
     public void AIClick(){
         ai.SetBoard(bd.board);
         int[] pos = ai.most_flip_put_stone();
-        bd.put_stone(pos[0],pos[1],turn_color);
+        if(pos[0] != -1&&pos[1] != -1){
+            bd.put_stone(pos[0],pos[1],turn_color);
+        }
         AI_data.text = $"AI Datas\nSetPosition\nx:{pos[0]}\ny:{pos[1]}";
         color_Change();
         ViewCanPut();
