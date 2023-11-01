@@ -80,6 +80,7 @@ public class StoneSetter : MonoBehaviour{
         List<int[]> can_put = bd.can_put_list(turn_color);
         foreach(int[] pos in can_put){
             stones[pos[0],pos[1]].GetComponent<StoneVisual>().color = 3;
+            stones[pos[0],pos[1]].GetComponent<StoneVisual>().ChangeColor();
         }
     }
 

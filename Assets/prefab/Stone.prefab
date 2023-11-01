@@ -92,6 +92,7 @@ MonoBehaviour:
   color: 0
   pos_record: 0000000000000000
   img: {fileID: 4271263260768646725}
+  parentSystem: {fileID: 0}
   stoneImages:
   - {fileID: 21300000, guid: dfd8331fc61a754469a5d5ee3c96beb9, type: 3}
   - {fileID: 21300000, guid: 5b0099c0d92374646b5b5b729542bd4a, type: 3}
